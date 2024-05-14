@@ -31,7 +31,7 @@ spec:
           value: "frontend"
           # value: "frontend.doodle.internal"
         - name: SLEEP_TIME
-          value: "5321"
+          value: "5123"
         - name: PYTHONUNBUFFERED
           value: "1"
         - name: ENVRIONMENT

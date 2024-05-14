@@ -9,7 +9,10 @@ spec:
       paths:
       - name: file://artifacts/doodle-frontend-blue/doodle-frontend-blue.yaml
     type: Yaml
+  drift:
+    action: Notify
+    enabled: true
   namespace: supreme-doodle
   placement:
     selector: rafay.dev/clusterName=hl-edge-rafay-03
-  version: doodle-frontend-blue-v1-202405142147190000
+  version: doodle-frontend-blue-v2-202405142151330000

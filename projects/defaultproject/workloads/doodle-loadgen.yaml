@@ -15,4 +15,3 @@ spec:
   namespace: supreme-doodle
   placement:
     selector: rafay.dev/clusterName=hl-edge-rafay-03
-  version: doodle-loadgen-v2-202405142201090000

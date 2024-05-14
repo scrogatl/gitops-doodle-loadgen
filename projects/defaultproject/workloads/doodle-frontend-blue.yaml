@@ -15,4 +15,3 @@ spec:
   namespace: supreme-doodle
   placement:
     selector: rafay.dev/clusterName=hl-edge-rafay-03
-  version: doodle-frontend-blue-v3-202405142200020000

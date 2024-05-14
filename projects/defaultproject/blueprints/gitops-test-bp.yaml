@@ -1,9 +1,0 @@
-apiVersion: infra.k8smgmt.io/v3
-kind: Blueprint
-metadata:
-  name: gitops-test-bp
-  project: defaultproject
-spec:
-  driftWebhook:
-    enabled: true
-  type: custom

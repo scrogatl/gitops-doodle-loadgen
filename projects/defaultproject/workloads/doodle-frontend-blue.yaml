@@ -5,6 +5,10 @@ metadata:
   project: defaultproject
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      paths:
+      - name: file://artifacts/doodle-frontend-blue/doodle-frontend-blue.yaml
     type: Yaml
   namespace: supreme-doodle
+  placement:
+    selector: rafay.dev/clusterName=hl-edge-rafay-03

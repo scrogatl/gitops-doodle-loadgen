@@ -24,14 +24,14 @@ spec:
     spec:
       containers:
       - name: loadgen
-        image: public.ecr.aws/z4m0n1r4/sd-loadgen:latest
+        image: public.ecr.aws/z4m0n1r4/sd-loadgen
         imagePullPolicy: Always
         env:
         - name: FRONTEND_HOST
           value: "frontend"
           # value: "frontend.doodle.internal"
         - name: SLEEP_TIME
-          value: "4555"
+          value: "5000"
         - name: PYTHONUNBUFFERED
           value: "1"
         - name: ENVRIONMENT

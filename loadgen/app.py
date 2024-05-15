@@ -7,7 +7,7 @@ import sys
 
 def loadgen():
     front_end = os.environ.get('FRONTEND_HOST', "localhost")
-    sleep_time = os.environ.get('SLEEP_TIME', "3")
+    sleep_time = os.environ.get('SLEEP_TIME', "4")
     print("FRONTEND_HOST: " + front_end)
     print("SLEEP_TIME: " + sleep_time)
     

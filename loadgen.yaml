@@ -30,15 +30,15 @@ spec:
         imagePullPolicy: Always
       imagePullSecrets:
       - name: ghcr-login-secret
-        env:
-        - name: FRONTEND_HOST
-          value: "frontend"
-          # value: "frontend.doodle.internal"
-        - name: SLEEP_TIME
-          value: "5123"
-        - name: PYTHONUNBUFFERED
-          value: "1"
-        - name: ENVRIONMENT
-          value: "rafay-edge"
-        - name: DOODLE-VERSION
-          value: "V0.99.1"
+      env:
+      - name: FRONTEND_HOST
+        value: "frontend"
+        # value: "frontend.doodle.internal"
+      - name: SLEEP_TIME
+        value: "5123"
+      - name: PYTHONUNBUFFERED
+        value: "1"
+      - name: ENVRIONMENT
+        value: "rafay-edge"
+      - name: DOODLE-VERSION
+        value: "V0.99.1"

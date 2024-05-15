@@ -29,13 +29,20 @@ jobs:
         #   username: ${{ secrets.DOCKERHUB_USERNAME }}
         #   password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Log in to registry
-        # This is where you will update the PAT to GITHUB_TOKEN
-        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-      -
-        name: Build and push
-        uses: docker/build-push-action@v4
-        with:
-          push: true
-          tags: ghcr.io/scrogatl/rafay-gitops-doodle-loadgen/doodle-loadgen:latest
+      - name: 'Login to GitHub Container Registry'
+            uses: docker/login-action@v1
+            with:
+              registry: ghcr.io
+              username: ${{github.actor}}
+              password: ${{secrets.GITHUB_TOKEN}}      
+      - name: 'Build Inventory Image'
+            run: |
+              docker build . --tag ghcr.io/scrogatl/doodle-loadgen:latest
+              docker push ghcr.io/scrogatl/doodle-loadgen:latest
+      # -
+        # name: Build and push
+        # uses: docker/build-push-action@v4
+        # with:
+        #   push: true
+        #   tags: ghcr.io/scrogatl/rafay-gitops-doodle-loadgen/doodle-loadgen:latest
 

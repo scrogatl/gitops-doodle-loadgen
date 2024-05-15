@@ -10,7 +10,7 @@ def loadgen():
     sleep_time = os.environ.get('SLEEP_TIME', "1")
     print("FRONTEND_HOST: " + front_end)
     print("SLEEP_TIME: " + sleep_time)
-    # 
+    
     while (True):
         timeString = datetime.now().strftime("%H:%M:%S.%f")[:-3]
         try:

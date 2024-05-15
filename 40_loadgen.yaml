@@ -29,7 +29,7 @@ spec:
         image: ghcr.io/scrogatl/doodle-loadgen:latest
         imagePullPolicy: Always
       imagePullSecrets:
-      - name: ghcr-creds
+      - name: ghcr-login-secret
         env:
         - name: FRONTEND_HOST
           value: "frontend"

@@ -4,26 +4,18 @@ on:
   push:
     branches: [ "main" ]
 
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     steps:
-#     - uses: actions/checkout@v4
-#     - name: Build the Docker image
-#       run: docker build . --file Dockerfile --tag customer-endpoint:$(date +%s)
-
 jobs:
-  docker:
+  build-push-loadgen:
     runs-on: ubuntu-latest
     steps:
       - name: 'Login to GitHub Container Registry'
-            uses: docker/login-action@v1
-            with:
-              registry: ghcr.io
-              username: ${{github.actor}}
-              password: ${{secrets.GITHUB_TOKEN}}      
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{github.actor}}
+          password: ${{secrets.GITHUB_TOKEN}}      
 
       - name: 'Build Inventory Image'
-            run: |
-              docker build . --tag ghcr.io/scrogatl/doodle-loadgen:latest
-              docker push ghcr.io/scrogatl/doodle-loadgen:latest
+        run: |
+          docker build . --tag ghcr.io/scrogatl/doodle-loadgen:latest
+          docker push ghcr.io/scrogatl/doodle-loadgen:latest

@@ -3,8 +3,8 @@ name: Docker Image CI
 on:
   push:
     branches: [ "main" ]
-
-on: workflow_dispatch
+  workflow_dispatch:
+   branches: [ "main" ]
 
 jobs:
   build-push-loadgen:

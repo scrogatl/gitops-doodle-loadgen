@@ -40,5 +40,5 @@ spec:
           value: "rafay-edge"
         - name: DOODLE-VERSION
           value: "V0.99.1"
-      imagePullSecrets:
-      - name: ghcr-login-secret
+      # imagePullSecrets:
+      # - name: ghcr-login-secret

@@ -3,23 +3,23 @@ kind: Deployment
 metadata:
   labels:
     application: helloworld
-    service: customer-endpoint
+    service: doodle-loadgen
     shard: blue
-    version: customer-endpoint
-  name: customer-endpoint
+    version: doodle-loadgen
+  name: doodle-loadgen
   namespace: supreme-doodle
 spec:
   replicas: 1
   selector:
     matchLabels:
       application: helloworld
-      service: customer-endpoint
+      service: doodle-loadgen
       shard: blue
   template:
     metadata:
       labels:
         application: helloworld
-        service: customer-endpoint
+        service: doodle-loadgen
         shard: blue
     spec:
       containers:

@@ -9,7 +9,6 @@ RUN apt autoremove
 FROM base
 
 WORKDIR /
-# EXPOSE 5000
 COPY loadgen /loadgen
 WORKDIR /loadgen
 

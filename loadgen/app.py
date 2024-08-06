@@ -15,10 +15,7 @@ def loadgen():
         timeString = datetime.now().strftime("%H:%M:%S.%f")[:-3]
         try:
             res = requests.get('http://' + front_end + ':5000', timeout=.5)
-            if res.status_code >= 300: 
-                print(timeString + " - [loadgen] - Status: " + str(res.status_code) + " - " + res.text )
-            else: 
-                print(timeString + " - [loadgen] - Status: " + str(res.status_code) + " - " + res.text)
+            print(timeString + " - [loadgen] - Status: " + str(res.status_code) + " - " + res.text )
         except Exception as e:
             print(timeString + " - [loadgen] - Status: " + repr(e))
         time.sleep( int(sleep_time) / 1000 )

@@ -1,6 +1,6 @@
 FROM python:3.10-slim-bullseye as base
 
-FROM base as builder
+FROM base AS builder
 
 RUN apt update && apt install git python3-pip -y
 RUN apt install bash -y

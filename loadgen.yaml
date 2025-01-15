@@ -37,7 +37,7 @@ spec:
         - name: PYTHONUNBUFFERED
           value: "1"
         - name: ENVRIONMENT
-          value: "rafay-edge"
+          value: "aks-edge"
         - name: DOODLE-VERSION
           value: "V0.99.1"
       # imagePullSecrets:

@@ -10,6 +10,7 @@ def loadgen():
     front_end_port = os.environ.get('F_PORT', "5000")
     sleep_time = os.environ.get('SLEEP_TIME', "5000")
     print("F_HOST: " + front_end)
+    print("F_PORT: " + front_end_port)
     print("SLEEP_TIME: " + sleep_time)
     
     while (True):

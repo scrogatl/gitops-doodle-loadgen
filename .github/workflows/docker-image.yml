@@ -28,3 +28,5 @@ jobs:
 
       - name: Delete Untagged Package
         uses: Minish144/delete-untagged-action@v2
+        with:
+          github-token: ${{ secrets.package-deletion }}  

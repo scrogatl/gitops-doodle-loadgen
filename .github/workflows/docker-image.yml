@@ -26,12 +26,5 @@ jobs:
           docker build . --tag ghcr.io/scrogatl/doodle-loadgen:latest
           docker push ghcr.io/scrogatl/doodle-loadgen:latest
 
-      - name: Delete Untagged Package
-        uses: Minish144/delete-untagged-action@v2
-        with:
-          github-token: ${{ secrets.PACKAGE_DELETE }}
-          personal-account: true
-          repository: scrogatl/gitops-doodle-loadgen
-          package-name: doodle-loadgen
 
         

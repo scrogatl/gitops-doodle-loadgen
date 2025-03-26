@@ -31,5 +31,5 @@ jobs:
         with:
           github-token: ${{ secrets.PACKAGE_DELETE }}
           personal-account: true
-          repository: doodle-loadgen
+          repository: scrogatl/gitops-doodle-loadgen
         

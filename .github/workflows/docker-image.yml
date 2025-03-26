@@ -29,4 +29,7 @@ jobs:
       - name: Delete Untagged Package
         uses: Minish144/delete-untagged-action@v2
         with:
-          github-token: ${{ secrets.PACKAGE_DELETE }}  
+          github-token: ${{ secrets.PACKAGE_DELETE }}
+          personal-account: true
+          repository: doodle-loadgen
+        

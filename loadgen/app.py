@@ -16,7 +16,7 @@ def loadgen():
     while (True):
         timeString = datetime.now().strftime("%H:%M:%S.%f")[:-3]
         try:
-            res = requests.get('http://' + front_end + ':' + front_end_port, timeout=2)
+            res = requests.get('http://' + front_end + ':' + front_end_port)
             print(timeString + " - [loadgen] - Status: " + str(res.status_code) + " - " + res.text )
         except Exception as e:
             print(timeString + " - [loadgen] - Status: " + repr(e))

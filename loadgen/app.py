@@ -16,7 +16,7 @@ def loadgen():
 
     req_url = ""
     if az_dns_suffix:
-        req_url = 'https://' + front_end + '.' + az_dns_suffix + ":" + front_end_port
+        req_url = 'https://' + front_end + '.' + az_dns_suffix 
     else:
         req_url = 'http://' + front_end + ':' + front_end_port
     

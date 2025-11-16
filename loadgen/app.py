@@ -23,6 +23,7 @@ def loadgen():
     while (True):
         timeString = datetime.now().strftime("%H:%M:%S.%f")[:-3]
         try:
+            print(f"Attempting to reach frontend at: {rq_url}")
             res = requests.get(rq_url)
             print(timeString + " - [loadgen] - Status: " + str(res.status_code) + " - " + res.text )
         except Exception as e:

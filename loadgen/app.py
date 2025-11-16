@@ -16,7 +16,7 @@ def loadgen():
 
     rq_url = ""
     if az_dns_suffix:
-        rq_url = 'https://' + front_end + '.' + az_dns_suffix
+        rq_url = 'https://' + front_end + '.internal.' + az_dns_suffix
     else:
         rq_url = 'http://' + front_end + ':' + front_end_port
     

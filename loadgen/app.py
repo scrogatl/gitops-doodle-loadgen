@@ -14,17 +14,17 @@ def loadgen():
     print("F_PORT: " + front_end_port)
     print("SLEEP_TIME: " + sleep_time)
 
-    rq_url = ""
+    req_url = ""
     if az_dns_suffix:
-        rq_url = 'https://' + front_end + '.' + az_dns_suffix
+        req_url = 'https://' + front_end + '.' + az_dns_suffix + ":" + front_end_port
     else:
-        rq_url = 'http://' + front_end + ':' + front_end_port
+        req_url = 'http://' + front_end + ':' + front_end_port
     
     while (True):
         timeString = datetime.now().strftime("%H:%M:%S.%f")[:-3]
         try:
-            print(f"Attempting to reach frontend at: {rq_url}")
-            res = requests.get(rq_url)
+            print(f"Attempting to reach frontend at: {req_url}")
+            res = requests.get(req_url)
             print(timeString + " - [loadgen] - Status: " + str(res.status_code) + " - " + res.text )
         except Exception as e:
             print(timeString + " - [loadgen] - Status: " + repr(e))

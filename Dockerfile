@@ -1,12 +1,4 @@
-FROM python:3.10-slim-bullseye as base
-
-FROM base AS builder
-
-RUN apt update && apt install git python3-pip -y
-RUN apt install bash -y
-RUN apt autoremove
-
-FROM base
+FROM python:3.10-slim-bullseye
 
 WORKDIR /
 COPY loadgen /loadgen

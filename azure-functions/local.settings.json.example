@@ -1,0 +1,10 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "F_HOST": "localhost",
+    "F_PORT": "5000",
+    "LOADGEN_SCHEDULE": "*/5 * * * * *"
+  }
+}

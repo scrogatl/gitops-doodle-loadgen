@@ -1,0 +1,2 @@
+-r ../loadgen/requirements.txt
+azure-functions

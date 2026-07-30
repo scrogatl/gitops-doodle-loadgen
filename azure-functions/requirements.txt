@@ -1,2 +1,6 @@
--r ../loadgen/requirements.txt
+# loadgen/app.py only actually needs `requests` (its own requirements.txt
+# also lists `flask`, which it doesn't import/use). Can't use `-r
+# ../loadgen/requirements.txt` here because Azure's remote build only
+# packages this directory, not sibling repo folders.
+requests
 azure-functions

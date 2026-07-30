@@ -1,0 +1,7 @@
+.venv
+local.settings.json
+__pycache__
+*.pyc
+# Copied from loadgen/app.py as a build step before publish/test - not
+# the source of truth, don't commit it.
+app.py

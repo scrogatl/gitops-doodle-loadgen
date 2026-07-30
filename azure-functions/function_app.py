@@ -1,12 +1,13 @@
 import os
-import sys
-
-# Reuse the existing ping_frontend() helper from loadgen/app.py instead of
-# duplicating the request logic for the Functions runtime.
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "loadgen"))
 
 import azure.functions as func
-from app import ping_frontend  # noqa: E402
+
+# loadgen/app.py is copied to app.py (this directory) as a build step
+# before publishing/testing - see deploy.sh/test-local.sh. Azure's remote
+# build only packages this directory, not sibling repo folders, so the
+# source of truth stays in loadgen/app.py but the deployed/tested artifact
+# needs its own local copy.
+from app import ping_frontend
 
 func_app = func.FunctionApp()
 

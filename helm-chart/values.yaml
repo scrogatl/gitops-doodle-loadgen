@@ -1,0 +1,25 @@
+name: doodle-loadgen
+replicaCount: 1
+labels:
+  app.kubernetes.io/name: doodle-loadgen
+  app.kubernetes.io/instance: loadgen-instance
+  app.kubernetes.io/version: "0.9.1"
+  app.kubernetes.io/component: service
+  app.kubernetes.io/part-of: helloworld
+image:
+  repository: ghcr.io/scrogatl/doodle-loadgen
+  tag: latest
+  pullPolicy: Always
+containerName: doodle-loadgen
+env:
+- name: F_HOST
+  value: doodle-frontend
+- name: SLEEP_TIME
+  value: '8500'
+- name: PYTHONUNBUFFERED
+  value: '1'
+- name: ENVRIONMENT
+  value: aks-edge
+- name: DOODLE-VERSION
+  value: V0.99.1
+ports: []

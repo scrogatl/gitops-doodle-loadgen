@@ -1,0 +1,6 @@
+apiVersion: v2
+name: doodle-loadgen
+description: Helm chart for doodle-loadgen (matches supreme-doodle k8s manifest)
+type: application
+version: 0.2.0
+appVersion: "0.9.1"
